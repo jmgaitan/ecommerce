@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  min-width: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 100dvh;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-wrap: pretty;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-weight: 100;
+  font-style: italic;
+}
+
+p, a {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: oblique;
+}
+
+.product-cards {
+  padding: 2rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  place-items: center;
+  gap: 16px;
+}
+
+.card {
+  width: 70%;
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid black;
+  align-items: center;
+  text-align: center;
+  margin-left: 10px;
+  background-color: #fff;
+  padding: 20px;
+  transition: all 0.9s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.card img {
+  height: 60%;
+  width: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .buy-link {
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  visibility: hidden;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 25px 50px 150px #09f;
+}
+.card:hover .buy-link {
+  visibility: visible;
+}
+
+.title-page {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border: #fff solid 25px;
+}
+
+.us-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(66, 104, 255);
+  border-top: 100px #09f solid;
+  border-top-left-radius: 1%;
+  border-top-right-radius: 1%;
+  border-top-width: 35px;
+  border-bottom: 100px #09f solid;
+  border-bottom-width: 35px;
+}
+
+h1 {
+  font-family: "Lemon", serif;
+  color: black;
+}
+
+.us-page {
+  box-sizing: border-box;
+  display: grid;
+}
+.us-page .info {
+  border: #09f solid 20px;
+}
+.us-page section {
+  margin: 20px;
+  display: flex;
+  place-items: center;
+  padding: 25px;
+}
+.us-page section div, .us-page section img {
+  box-shadow: 0px 5px 15px rgba(0, 153, 255, 0.5098039216);
+}
+.us-page .img-content {
+  height: 15%;
+  width: 25%;
+  border-radius: 100%;
+}
+.us-page p {
+  font-size: 1.2rem;
+  text-wrap: balance;
+  height: auto;
+  width: 500px;
+  text-align: center;
+}
+.us-page .content-right {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border-style: groove;
+  border-right: black 20px;
+}
+.us-page .content-right .img-content {
+  margin-left: 10%;
+}
+.us-page .content-right p {
+  padding: 20px;
+}
+.us-page .content-left {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  border-style: groove;
+  border-left: 5px;
+}
+.us-page .content-left .img-content {
+  margin-right: 10%;
+}
+.us-page .content-left p {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .us-page {
+    display: block;
+  }
+  .us-page section {
+    margin: auto;
+    display: block;
+  }
+  .us-page .content-right, .us-page .content-left {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main_container-form h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.form-add {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.1);
+}
+.form-add label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-add input[type=text],
+.form-add input[type=email],
+.form-add input[type=number],
+.form-add input[type=file],
+.form-add textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-add input[type=checkbox] {
+  margin-top: 10px;
+}
+.form-add input[type=submit] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.form-add input[type=submit]:hover {
+  background-color: #0056b3;
+}
+.form-add textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.footer {
+  background-color: #343541;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: 100px;
+}
+.footer div {
+  padding: 30px;
+}
+.footer .icon-socialmedia {
+  flex: 1;
+}
+.footer img {
+  width: 35px;
+}
+.footer .footer-link {
+  color: #fff;
+}
+.footer p {
+  color: #fff;
+  text-justify: center;
+  text-wrap: balance;
+}
+.footer .link__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.header__container {
+  background-color: #343541;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container .logo-name {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.header__container .logo-name h2 {
+  padding-left: 1%;
+  margin: 0px;
+  color: #fff;
+}
+.header__container .logo-name img {
+  width: 50px;
+}
+
+ul {
+  font-family: "Lemon", serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdownmenu {
+  margin-bottom: 0rem;
+  height: -moz-max-content;
+  height: max-content;
+}
+.dropdownmenu ul {
+  list-style-type: none;
+  background: gray;
+  list-style: none;
+  width: 100%;
+  margin-left: 25px;
+}
+.dropdownmenu li {
+  float: left;
+  margin-left: 0;
+}
+.dropdownmenu li:hover {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.dropdownmenu li:hover a {
+  background: #fff;
+  color: #343541;
+}
+.dropdownmenu a {
+  color: #FFFFFF;
+  display: block;
+  font: bold 1rem/20px sans-serif;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.45s ease;
+  -webkit-transition: all 0.45s ease;
+  -moz-transition: all 0.45s ease;
+  -ms-transition: all 0.45s ease;
+  -o-transition: all 0.45s ease;
+}/*# sourceMappingURL=main.css.map */

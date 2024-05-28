@@ -1,14 +1,9 @@
-import { products } from './temp/products.json'
-import { Products } from './components/Products.jsx'
-
-
+import  RouterApp  from './routes/RouterApp.jsx'
 function App() {
   return (
-    <>
-      <Products products={products} />
-    
-    </>
+      <>
+        <RouterApp />
+      </>
   )
 }
-
 export default App
